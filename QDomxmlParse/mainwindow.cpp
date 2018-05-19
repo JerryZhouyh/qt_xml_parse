@@ -12,3 +12,13 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+void MainWindow::on_parseXml_clicked()
+{
+    xmlFile.initXmlFile();
+}
+
+void MainWindow::on_printInfo_clicked()
+{
+    xmlFile.startParse();
+}

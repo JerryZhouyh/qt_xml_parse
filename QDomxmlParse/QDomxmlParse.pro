@@ -5,7 +5,7 @@
 #-------------------------------------------------
 
 QT       += core gui
-
+QT       += core xml
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = QDomxmlParse
@@ -24,8 +24,10 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    corexmlparse.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    corexmlparse.h
 
 FORMS    += mainwindow.ui
