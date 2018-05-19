@@ -6,6 +6,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    xmlFile = new CoreXmlParse(ui);
 }
 
 MainWindow::~MainWindow()
@@ -15,10 +16,10 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_parseXml_clicked()
 {
-    xmlFile.initXmlFile();
+    xmlFile->initXmlFile();
 }
 
 void MainWindow::on_printInfo_clicked()
 {
-    xmlFile.startParse();
+    xmlFile->startParse();
 }

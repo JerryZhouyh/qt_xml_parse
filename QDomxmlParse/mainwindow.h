@@ -22,7 +22,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    CoreXmlParse xmlFile;
+    CoreXmlParse *xmlFile;
 };
 
 #endif // MAINWINDOW_H

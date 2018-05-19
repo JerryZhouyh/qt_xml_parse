@@ -9,22 +9,25 @@
 #include <QTreeView>
 #include <QStandardItemModel>
 #include <QMainWindow>
-
+namespace Ui {
+class MainWindow;
+}
 class CoreXmlParse
 {
 public:
-    CoreXmlParse();
+    CoreXmlParse(Ui::MainWindow *uiParam);
     //start xml node
     void startParse();
     //init xml file
     void initXmlFile();
 private:
     //parse xml node
-    int readNode(QDomNode node,int deepCount);
+    int readNode(QDomNode node,int deepCount,QStandardItem* item=NULL);
     //treeView model
     QStandardItemModel *model;
     QDomDocument doc;
     QString filePath;
+    Ui::MainWindow *ui;
 };
 
 #endif // COREXMLPARSE_H
