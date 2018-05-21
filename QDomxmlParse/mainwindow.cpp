@@ -23,3 +23,22 @@ void MainWindow::on_printInfo_clicked()
 {
     xmlFile->startParse();
 }
+
+void MainWindow::on_treeView_clicked(const QModelIndex &index)
+{
+
+//    qDebug()<<index.data().toString();
+//    qDebug()<<index.row();
+//    qDebug()<<index.column();
+}
+
+
+
+
+
+
+
+void MainWindow::on_writeXml_clicked()
+{
+    xmlFile->writeXml();
+}

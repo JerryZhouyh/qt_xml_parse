@@ -20,6 +20,10 @@ private slots:
 
     void on_printInfo_clicked();
 
+    void on_treeView_clicked(const QModelIndex &index);
+
+    void on_writeXml_clicked();
+
 private:
     Ui::MainWindow *ui;
     CoreXmlParse *xmlFile;
